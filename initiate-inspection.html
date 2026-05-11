@@ -100,15 +100,10 @@
           <p class="margin-bottom-4">Initialize inspection using the values below and click Submit.</p>
 
           <div class="margin-bottom-4" id="inspection-type-group">
-            <label class="usa-label" for="inspection-type">Inspection Type <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection type</span>
+            <label class="usa-label" for="inspection-type">Inspection Code <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection code</span>
             <select class="usa-select" id="inspection-type" name="inspection-type" required>
               <option value="">Please Select</option>
-              <option value="application">Application</option>
-              <option value="case">Case</option>
-              <option value="routine-field-observation">Routine Field Observation</option>
-              <option value="routine">Routine</option>
-              <option value="field-observation">Field Observation</option>
             </select>
           </div>
 
@@ -159,6 +154,31 @@
   </div>
 
   <script>
+    // Populate Inspection Code dropdown from saved enabled codes
+    (function populateInspectionCodes() {
+      var defaultCodes = [
+        'AFO-FIRE-001', 'AFO-WATER-002', 'AFO-LIC-003', 'AFO-WILD-005',
+        'AFO-PARK-006', 'AFO-HUNT-007', 'AFO-FISH-008', 'AFO-SOIL-010',
+        'AFO-HAZ-011',  'AFO-FOOD-012', 'AFO-ELEC-014', 'AFO-CHEM-015',
+        'AFO-BUILD-016','AFO-PEST-018', 'AFO-FEED-019', 'AFO-ROAD-020',
+        'AFO-UTIL-022', 'AFO-NATIVE-023','AFO-WETLAND-024'
+      ];
+
+      var codes = defaultCodes;
+      try {
+        var stored = localStorage.getItem('enabledInspectionCodes');
+        if (stored) { codes = JSON.parse(stored); }
+      } catch (e) {}
+
+      var select = document.getElementById('inspection-type');
+      codes.forEach(function(code) {
+        var option = document.createElement('option');
+        option.value = code.toLowerCase();
+        option.textContent = code;
+        select.appendChild(option);
+      });
+    })();
+
     // Get task ID from URL to maintain context
     const urlParams = new URLSearchParams(window.location.search);
     const taskId = urlParams.get('id');

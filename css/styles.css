@@ -864,6 +864,7 @@ select:focus {
   margin: 0;
   padding: 0;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -2342,4 +2343,33 @@ select:focus {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+/* Inspection Codes Summary Bar
+   ========================================================================== */
+
+.inspection-codes-summary-bar {
+  background: #fff;
+  border: 1px solid #112e51;
+  margin-top: 2rem;
+  padding: 0.9em;
+  position: sticky;
+  top: 0.5em;
+  z-index: 100;
+}
+
+.inspection-codes-summary-bar .usa-button {
+  margin: 0;
+}
+
+.inspection-codes-summary-bar__count {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+.inspection-codes-summary-bar__unsaved {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #71767a;
 }

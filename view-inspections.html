@@ -116,12 +116,10 @@
 
       <div class="grid-row grid-gap-2 margin-top-2">
         <div class="grid-col-5">
-          <label class="usa-label" for="inspection-type-filter">Inspection Type</label>
+          <label class="usa-label" for="inspection-type-filter">Inspection Code</label>
           <select class="usa-select" id="inspection-type-filter" name="inspection-type-filter">
             <option value="">Please Select</option>
             <option value="all">All</option>
-            <option value="initial-shop">Initial Shop</option>
-            <option value="health-safety">Health & Safety</option>
           </select>
         </div>
         <div class="grid-col-5">
@@ -273,5 +271,31 @@
       </div>
     </main>
   </div>
+  <script>
+    // Populate Inspection Code filter from saved enabled codes
+    (function populateInspectionCodes() {
+      var defaultCodes = [
+        'AFO-FIRE-001', 'AFO-WATER-002', 'AFO-LIC-003', 'AFO-WILD-005',
+        'AFO-PARK-006', 'AFO-HUNT-007', 'AFO-FISH-008', 'AFO-SOIL-010',
+        'AFO-HAZ-011',  'AFO-FOOD-012', 'AFO-ELEC-014', 'AFO-CHEM-015',
+        'AFO-BUILD-016','AFO-PEST-018', 'AFO-FEED-019', 'AFO-ROAD-020',
+        'AFO-UTIL-022', 'AFO-NATIVE-023','AFO-WETLAND-024'
+      ];
+
+      var codes = defaultCodes;
+      try {
+        var stored = localStorage.getItem('enabledInspectionCodes');
+        if (stored) { codes = JSON.parse(stored); }
+      } catch (e) {}
+
+      var select = document.getElementById('inspection-type-filter');
+      codes.forEach(function(code) {
+        var option = document.createElement('option');
+        option.value = code.toLowerCase();
+        option.textContent = code;
+        select.appendChild(option);
+      });
+    })();
+  </script>
 </body>
 </html>

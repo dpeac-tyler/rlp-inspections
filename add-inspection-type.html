@@ -121,15 +121,33 @@
       <div class="profile-content">
         <div class="inspection-content">
           <div class="margin-bottom-4" id="inspection-type-group">
-            <label class="usa-label" for="inspection-type">Inspection Type <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection type</span>
+            <label class="usa-label" for="inspection-type">Inspection Code <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection code</span>
             <select class="usa-select" id="inspection-type" name="inspection-type" required>
               <option value="">Please Select</option>
-              <option value="application">Application</option>
-              <option value="case">Case</option>
-              <option value="routine-field-observation">Routine Field Observation</option>
-              <option value="routine">Routine</option>
-              <option value="field-observation">Field Observation</option>
+            </select>
+          </div>
+
+          <div class="margin-bottom-4" id="inspection-team-group" hidden>
+            <label class="usa-label" for="inspection-team">Inspection Team <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-team-error" hidden>Select an inspection team</span>
+            <select class="usa-select" id="inspection-team" name="inspection-team">
+              <option value="">Please Select</option>
+              <option value="team-1">Team 1</option>
+              <option value="team-2">Team 2</option>
+              <option value="team-3">Team 3</option>
+            </select>
+          </div>
+
+          <div class="margin-bottom-4" id="license-type-group" hidden>
+            <label class="usa-label" for="license-type">License Type</label>
+            <select class="usa-select" id="license-type" name="license-type">
+              <option value="">Please Select</option>
+              <option value="firearm-business">Firearm Business License</option>
+              <option value="professional-engineer">Professional Engineer</option>
+              <option value="contractor">Contractor License</option>
+              <option value="fishing-guide">Fishing Guide Permit</option>
+              <option value="wildlife-rehab">Wildlife Rehabilitation</option>
             </select>
           </div>
 
@@ -339,6 +357,32 @@
   </div>
 
   <script>
+    // Populate Inspection Code dropdown from saved enabled codes, falling back to
+    // the default enabled state defined in inspection-codes.html
+    (function populateInspectionCodes() {
+      var defaultCodes = [
+        'AFO-FIRE-001', 'AFO-WATER-002', 'AFO-LIC-003', 'AFO-WILD-005',
+        'AFO-PARK-006', 'AFO-HUNT-007', 'AFO-FISH-008', 'AFO-SOIL-010',
+        'AFO-HAZ-011',  'AFO-FOOD-012', 'AFO-ELEC-014', 'AFO-CHEM-015',
+        'AFO-BUILD-016','AFO-PEST-018', 'AFO-FEED-019', 'AFO-ROAD-020',
+        'AFO-UTIL-022', 'AFO-NATIVE-023','AFO-WETLAND-024'
+      ];
+
+      var codes = defaultCodes;
+      try {
+        var stored = localStorage.getItem('enabledInspectionCodes');
+        if (stored) { codes = JSON.parse(stored); }
+      } catch (e) {}
+
+      var select = document.getElementById('inspection-type');
+      codes.forEach(function(code) {
+        var option = document.createElement('option');
+        option.value = code.toLowerCase();
+        option.textContent = code;
+        select.appendChild(option);
+      });
+    })();
+
     // Scheduling checkbox functionality
     const enableSchedulingCheckbox = document.getElementById('enable-scheduling');
     const schedulingFields = document.getElementById('scheduling-fields');
@@ -364,6 +408,16 @@
       if (!inspectionType.value) {
         showFieldError('inspection-type-group', 'inspection-type-error', 'inspection-type');
         isValid = false;
+      }
+
+      // Validate Inspection Team (only when an Inspection Code has been selected)
+      const inspectionTeamGroup = document.getElementById('inspection-team-group');
+      if (!inspectionTeamGroup.hasAttribute('hidden')) {
+        const inspectionTeam = document.getElementById('inspection-team');
+        if (!inspectionTeam.value) {
+          showFieldError('inspection-team-group', 'inspection-team-error', 'inspection-team');
+          isValid = false;
+        }
       }
 
       // Validate Inspection Name
@@ -460,9 +514,29 @@
 
     // Clear errors when user starts fixing them
     document.getElementById('inspection-type').addEventListener('change', function() {
+      const teamGroup = document.getElementById('inspection-team-group');
+      const teamSelect = document.getElementById('inspection-team');
+      const licenseTypeGroup = document.getElementById('license-type-group');
+      const licenseTypeSelect = document.getElementById('license-type');
+
       if (this.value) {
         document.getElementById('inspection-type-group').classList.remove('usa-form-group--error');
         document.getElementById('inspection-type-error').setAttribute('hidden', '');
+        this.classList.remove('usa-select--error');
+        teamGroup.removeAttribute('hidden');
+        licenseTypeGroup.removeAttribute('hidden');
+      } else {
+        teamGroup.setAttribute('hidden', '');
+        teamSelect.value = '';
+        licenseTypeGroup.setAttribute('hidden', '');
+        licenseTypeSelect.value = '';
+      }
+    });
+
+    document.getElementById('inspection-team').addEventListener('change', function() {
+      if (this.value) {
+        document.getElementById('inspection-team-group').classList.remove('usa-form-group--error');
+        document.getElementById('inspection-team-error').setAttribute('hidden', '');
         this.classList.remove('usa-select--error');
       }
     });

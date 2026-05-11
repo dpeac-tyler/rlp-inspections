@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspection Codes - RLP</title>
+  <!-- Custom RLP Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header management">
+      <a class="usa-skipnav" href="#main-content">Skip to Main Content</a>
+
+      <header class="usa-header">
+        <div class="skinny-header-container">
+          <div class="grid-container">
+            <div class="welcome-agency usa-banner__header-text">
+              Welcome DNR! &nbsp;<a href="#"><u>Logout</u></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="border-bottom-2px border-base-lighter">
+        <div class="grid-container navigation">
+          <div class="grid-row">
+            <div class="tablet:grid-col-6 logo-flex">
+              <a class="agency-logo-link" href="index.html">
+                <img src="assets/il-logo.png"
+                     alt="Illinois Department of Natural Resources agency logo"
+                     class="agency-logo">
+              </a>
+              <a class="agency-name-link" href="index.html">
+                <div class="agency-name">Illinois Department of Natural Resources</div>
+              </a>
+            </div>
+            <div class="tablet:grid-col-6">
+              <nav class="grid-container">
+                <div class="grid-row header--nav-links">
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="index.html">
+                      <img src="assets/rlp-logo.png"
+                           alt="RLP logo"
+                           class="margin-right-1"
+                           height="30">Home
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col-auto nav__item">
+                    <a class="usa-link" href="search.html">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-magnifying-glass fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                      </svg>Search
+                    </a>
+                  </div>
+                  <div class="tablet:grid-col nav__item">
+                    <a class="usa-link" href="#" target="_blank">
+                      <svg aria-hidden="true" focusable="false" class="svg-inline--fa fa-life-ring fa-xl margin-right-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="currentColor" d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                      </svg>Help
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="grid-container">
+      <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
+        <ol class="usa-breadcrumb__list">
+          <li class="usa-breadcrumb__list-item">
+            <a href="settings.html" class="usa-breadcrumb__link">Settings</a>
+          </li>
+          <li class="usa-breadcrumb__list-item">
+            <a href="inspection-menu.html" class="usa-breadcrumb__link">Inspections</a>
+          </li>
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>Inspection Codes</span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title page-title--underlined">Inspection Codes</h1>
+
+      <div class="margin-top-2">
+        <label class="usa-label" for="search-input">Search</label>
+        <input class="usa-input" id="search-input" name="search-input" type="text" placeholder="Search by code or agency...">
+      </div>
+
+      <!-- Sticky summary bar -->
+      <div id="summary-bar"
+           class="inspection-codes-summary-bar"
+           role="region"
+           aria-label="Code management summary">
+        <div class="task-controls">
+          <span id="enabled-count" aria-live="polite" aria-atomic="true" class="inspection-codes-summary-bar__count"></span>
+          <span class="button-divider"></span>
+          <button type="button" class="usa-button" id="save-button" disabled>Save</button>
+          <span class="button-divider"></span>
+          <span id="unsaved-indicator" class="inspection-codes-summary-bar__unsaved" hidden aria-live="polite">Unsaved changes</span>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
+        <div class="table-controls">
+          <div class="table-controls__left">
+            <strong id="entry-count">Showing 1 - 5 of 5 Entries</strong>
+          </div>
+          <div class="table-controls__right">
+            <label for="entries-per-page" class="table-controls__label">Show</label>
+            <select class="usa-select table-controls__select" id="entries-per-page" name="entries-per-page">
+              <option value="100" selected>100</option>
+              <option value="50">50</option>
+              <option value="25">25</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="usa-table usa-table--borderless usa-table--striped">
+          <thead>
+            <tr>
+              <th scope="col">Enabled</th>
+              <th scope="col" role="columnheader" aria-sort="none">AFO Inspection Type Code <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">RLP Agency <span class="sort-arrows"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-1" type="checkbox" name="toggle-1" checked>
+                  <label class="usa-checkbox__label" for="toggle-1"><span class="usa-sr-only">Enable AFO-FIRE-001</span></label>
+                </div>
+              </td>
+              <td>AFO-FIRE-001</td>
+              <td>Illinois State Fire Marshal</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-2" type="checkbox" name="toggle-2" checked>
+                  <label class="usa-checkbox__label" for="toggle-2"><span class="usa-sr-only">Enable AFO-WATER-002</span></label>
+                </div>
+              </td>
+              <td>AFO-WATER-002</td>
+              <td>Illinois EPA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-3" type="checkbox" name="toggle-3" checked>
+                  <label class="usa-checkbox__label" for="toggle-3"><span class="usa-sr-only">Enable AFO-LIC-003</span></label>
+                </div>
+              </td>
+              <td>AFO-LIC-003</td>
+              <td>Illinois DNR</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-4" type="checkbox" name="toggle-4">
+                  <label class="usa-checkbox__label" for="toggle-4"><span class="usa-sr-only">Enable AFO-EQUIP-004</span></label>
+                </div>
+              </td>
+              <td>AFO-EQUIP-004</td>
+              <td>Illinois OSHA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-5" type="checkbox" name="toggle-5" checked>
+                  <label class="usa-checkbox__label" for="toggle-5"><span class="usa-sr-only">Enable AFO-WILD-005</span></label>
+                </div>
+              </td>
+              <td>AFO-WILD-005</td>
+              <td>Illinois DNR</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-6" type="checkbox" name="toggle-6" checked>
+                  <label class="usa-checkbox__label" for="toggle-6"><span class="usa-sr-only">Enable AFO-PARK-006</span></label>
+                </div>
+              </td>
+              <td>AFO-PARK-006</td>
+              <td>Illinois DNR</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-7" type="checkbox" name="toggle-7" checked>
+                  <label class="usa-checkbox__label" for="toggle-7"><span class="usa-sr-only">Enable AFO-HUNT-007</span></label>
+                </div>
+              </td>
+              <td>AFO-HUNT-007</td>
+              <td>Illinois DNR</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-8" type="checkbox" name="toggle-8" checked>
+                  <label class="usa-checkbox__label" for="toggle-8"><span class="usa-sr-only">Enable AFO-FISH-008</span></label>
+                </div>
+              </td>
+              <td>AFO-FISH-008</td>
+              <td>Illinois DNR</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-9" type="checkbox" name="toggle-9">
+                  <label class="usa-checkbox__label" for="toggle-9"><span class="usa-sr-only">Enable AFO-AIR-009</span></label>
+                </div>
+              </td>
+              <td>AFO-AIR-009</td>
+              <td>Illinois EPA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-10" type="checkbox" name="toggle-10" checked>
+                  <label class="usa-checkbox__label" for="toggle-10"><span class="usa-sr-only">Enable AFO-SOIL-010</span></label>
+                </div>
+              </td>
+              <td>AFO-SOIL-010</td>
+              <td>Illinois EPA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-11" type="checkbox" name="toggle-11" checked>
+                  <label class="usa-checkbox__label" for="toggle-11"><span class="usa-sr-only">Enable AFO-HAZ-011</span></label>
+                </div>
+              </td>
+              <td>AFO-HAZ-011</td>
+              <td>Illinois EPA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-12" type="checkbox" name="toggle-12" checked>
+                  <label class="usa-checkbox__label" for="toggle-12"><span class="usa-sr-only">Enable AFO-FOOD-012</span></label>
+                </div>
+              </td>
+              <td>AFO-FOOD-012</td>
+              <td>Illinois Department of Public Health</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-13" type="checkbox" name="toggle-13">
+                  <label class="usa-checkbox__label" for="toggle-13"><span class="usa-sr-only">Enable AFO-SANIT-013</span></label>
+                </div>
+              </td>
+              <td>AFO-SANIT-013</td>
+              <td>Illinois Department of Public Health</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-14" type="checkbox" name="toggle-14" checked>
+                  <label class="usa-checkbox__label" for="toggle-14"><span class="usa-sr-only">Enable AFO-ELEC-014</span></label>
+                </div>
+              </td>
+              <td>AFO-ELEC-014</td>
+              <td>Illinois OSHA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-15" type="checkbox" name="toggle-15" checked>
+                  <label class="usa-checkbox__label" for="toggle-15"><span class="usa-sr-only">Enable AFO-CHEM-015</span></label>
+                </div>
+              </td>
+              <td>AFO-CHEM-015</td>
+              <td>Illinois OSHA</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-16" type="checkbox" name="toggle-16" checked>
+                  <label class="usa-checkbox__label" for="toggle-16"><span class="usa-sr-only">Enable AFO-BUILD-016</span></label>
+                </div>
+              </td>
+              <td>AFO-BUILD-016</td>
+              <td>Illinois State Fire Marshal</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-17" type="checkbox" name="toggle-17">
+                  <label class="usa-checkbox__label" for="toggle-17"><span class="usa-sr-only">Enable AFO-SPRK-017</span></label>
+                </div>
+              </td>
+              <td>AFO-SPRK-017</td>
+              <td>Illinois State Fire Marshal</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-18" type="checkbox" name="toggle-18" checked>
+                  <label class="usa-checkbox__label" for="toggle-18"><span class="usa-sr-only">Enable AFO-PEST-018</span></label>
+                </div>
+              </td>
+              <td>AFO-PEST-018</td>
+              <td>Illinois Department of Agriculture</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-19" type="checkbox" name="toggle-19" checked>
+                  <label class="usa-checkbox__label" for="toggle-19"><span class="usa-sr-only">Enable AFO-FEED-019</span></label>
+                </div>
+              </td>
+              <td>AFO-FEED-019</td>
+              <td>Illinois Department of Agriculture</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-20" type="checkbox" name="toggle-20" checked>
+                  <label class="usa-checkbox__label" for="toggle-20"><span class="usa-sr-only">Enable AFO-ROAD-020</span></label>
+                </div>
+              </td>
+              <td>AFO-ROAD-020</td>
+              <td>Illinois Department of Transportation</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-21" type="checkbox" name="toggle-21">
+                  <label class="usa-checkbox__label" for="toggle-21"><span class="usa-sr-only">Enable AFO-BRIDGE-021</span></label>
+                </div>
+              </td>
+              <td>AFO-BRIDGE-021</td>
+              <td>Illinois Department of Transportation</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-22" type="checkbox" name="toggle-22" checked>
+                  <label class="usa-checkbox__label" for="toggle-22"><span class="usa-sr-only">Enable AFO-UTIL-022</span></label>
+                </div>
+              </td>
+              <td>AFO-UTIL-022</td>
+              <td>Illinois Commerce Commission</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-23" type="checkbox" name="toggle-23" checked>
+                  <label class="usa-checkbox__label" for="toggle-23"><span class="usa-sr-only">Enable AFO-NATIVE-023</span></label>
+                </div>
+              </td>
+              <td>AFO-NATIVE-023</td>
+              <td>US Fish & Wildlife Service</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-24" type="checkbox" name="toggle-24" checked>
+                  <label class="usa-checkbox__label" for="toggle-24"><span class="usa-sr-only">Enable AFO-WETLAND-024</span></label>
+                </div>
+              </td>
+              <td>AFO-WETLAND-024</td>
+              <td>US Fish & Wildlife Service</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input code-toggle" id="toggle-25" type="checkbox" name="toggle-25">
+                  <label class="usa-checkbox__label" for="toggle-25"><span class="usa-sr-only">Enable AFO-FOREST-025</span></label>
+                </div>
+              </td>
+              <td>AFO-FOREST-025</td>
+              <td>Illinois DNR</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="no-results" class="margin-top-2" hidden>
+          <p class="text-base-dark">No inspection codes match your search.</p>
+        </div>
+      </div>
+
+      <nav aria-label="Pagination" class="usa-pagination" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <ul class="usa-pagination__list">
+          <li class="usa-pagination__item usa-pagination__arrow">
+            <a href="javascript:void(0)" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+              <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+              </svg>
+              <span class="usa-pagination__link-text">Previous</span>
+            </a>
+          </li>
+          <li class="usa-pagination__item">
+            <a href="javascript:void(0)" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+          </li>
+          <li class="usa-pagination__item">
+            <a href="javascript:void(0)" class="usa-pagination__button" aria-label="Page 2">2</a>
+          </li>
+          <li class="usa-pagination__item">
+            <a href="javascript:void(0)" class="usa-pagination__button" aria-label="Page 3">3</a>
+          </li>
+          <li class="usa-pagination__item usa-pagination__arrow">
+            <a href="javascript:void(0)" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+              <span class="usa-pagination__link-text">Next</span>
+              <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Success Notification -->
+  <div id="success-notification" class="notification" hidden>
+    <svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" fill="#00a91c" stroke="#00a91c" stroke-width="2"/>
+      <path d="M7 13l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="notification-text">Changes saved successfully</span>
+  </div>
+
+  <script>
+    const allRows = Array.from(document.querySelectorAll('.usa-table tbody tr'));
+    const searchInput = document.getElementById('search-input');
+    const entryCount = document.getElementById('entry-count');
+    const enabledCount = document.getElementById('enabled-count');
+    const unsavedIndicator = document.getElementById('unsaved-indicator');
+    const saveButton = document.getElementById('save-button');
+    const noResults = document.getElementById('no-results');
+    const total = allRows.length;
+
+    function updateEnabledCount() {
+      const enabled = document.querySelectorAll('.code-toggle:checked').length;
+      enabledCount.textContent = enabled + ' of ' + total + ' codes enabled';
+    }
+
+    function updateTableCount() {
+      const visible = allRows.filter(function(r) { return r.style.display !== 'none'; }).length;
+      if (visible === 0) {
+        entryCount.textContent = 'Showing 0 Entries';
+        noResults.removeAttribute('hidden');
+      } else {
+        entryCount.textContent = 'Showing 1 - ' + visible + ' of ' + total + ' Entries';
+        noResults.setAttribute('hidden', '');
+      }
+    }
+
+    function markUnsaved() {
+      unsavedIndicator.removeAttribute('hidden');
+      saveButton.removeAttribute('disabled');
+    }
+
+    function markSaved() {
+      unsavedIndicator.setAttribute('hidden', '');
+      saveButton.setAttribute('disabled', '');
+    }
+
+    // Search
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      allRows.forEach(function(row) {
+        const cells = row.querySelectorAll('td');
+        const code = cells[1].textContent.toLowerCase();
+        const agency = cells[2].textContent.toLowerCase();
+        row.style.display = (!query || code.includes(query) || agency.includes(query)) ? '' : 'none';
+      });
+      updateTableCount();
+    });
+
+    // Checkbox toggles
+    document.querySelectorAll('.code-toggle').forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        updateEnabledCount();
+        markUnsaved();
+      });
+    });
+
+    // Save
+    saveButton.addEventListener('click', function() {
+      const enabledCodes = Array.from(document.querySelectorAll('.code-toggle:checked')).map(function(cb) {
+        return cb.closest('tr').querySelectorAll('td')[1].textContent.trim();
+      });
+      localStorage.setItem('enabledInspectionCodes', JSON.stringify(enabledCodes));
+      markSaved();
+      showNotification();
+    });
+
+    function showNotification() {
+      const notification = document.getElementById('success-notification');
+      notification.removeAttribute('hidden');
+
+      setTimeout(function() {
+        notification.classList.add('show');
+      }, 10);
+
+      setTimeout(function() {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+
+        setTimeout(function() {
+          notification.classList.remove('hide');
+          notification.setAttribute('hidden', '');
+        }, 400);
+      }, 4000);
+    }
+
+    // Initialize
+    updateEnabledCount();
+    updateTableCount();
+  </script>
+</body>
+</html>
