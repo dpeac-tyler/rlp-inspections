@@ -488,6 +488,11 @@ fieldset.margin-bottom-4  {
   color: #1a4480;
 }
 
+.external-link-icon {
+  margin-left: 0.4rem;
+  vertical-align: -1px;
+}
+
 .usa-button {
   font-family: "Public Sans Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -1171,6 +1176,10 @@ select:focus {
   margin: 20px 20px 0 20px;
 }
 
+.task-content-section + .task-content-section {
+  margin-top: 5rem;
+}
+
 .task-content-section h2 {
   margin-top: 0;
   margin-bottom: 1.6rem;
@@ -1183,6 +1192,16 @@ select:focus {
 
 .task-content-section h2 a:hover {
   text-decoration: underline;
+}
+
+.task-content-section h3 {
+  margin: 0 0 0.8rem;
+}
+
+.task-content-section hr {
+  margin: 0 0 2.4rem;
+  border: 0;
+  border-top: 2px solid #dfe1e2;
 }
 
 /* Icon Key
@@ -1689,24 +1708,12 @@ select:focus {
   padding: 2rem;
 }
 
-.inspection-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.detail-field {
+  margin-bottom: 2rem;
 }
 
-.inspection-info__item {
-  font-size: 1.6rem;
-  line-height: 1.6;
-}
-
-.inspection-info__label {
-  font-weight: normal;
-  margin-right: 0.5rem;
-}
-
-.inspection-info__value {
-  font-weight: normal;
+.detail-field:last-child {
+  margin-bottom: 0;
 }
 
 .category-filter-row {

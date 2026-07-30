@@ -68,99 +68,399 @@
       </div>
     </div>
 
+    <nav class="horizontalNav main-menu">
+      <ul class="usa-nav__primary display-flex padding-left-0">
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="queues.html">Queues</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="my-tasks.html">My Tasks</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="license-types.html">License Types</a></span>
+        </li>
+        <li class="usa-nav__primary-item">
+          <span class="menuItem-inner"><a href="applications.html">Applications</a></span>
+        </li>
+        <li class="usa-nav__primary-item active">
+          <span class="menuItem-inner"><a href="settings.html">Settings</a></span>
+        </li>
+      </ul>
+    </nav>
+
     <main id="main-content" class="grid-container">
       <nav class="usa-breadcrumb margin-top-2" aria-label="Breadcrumbs">
-        <ol class="usa-breadcrumb__list">
-          <li class="usa-breadcrumb__list-item">
-            <a href="search.html" class="usa-breadcrumb__link">Back to Submission Search Results</a>
-          </li>
-          <li class="usa-breadcrumb__list-item">
-            <a href="individual-profile.html?tab=inspections" class="usa-breadcrumb__link" id="profile-breadcrumb">Sarah Johnson</a>
-          </li>
-          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
-            <span>View Inspection</span>
-          </li>
-        </ol>
+        <ol class="usa-breadcrumb__list" id="breadcrumb-list"></ol>
       </nav>
 
-      <div class="profile-header">
-        <h1 class="profile-header__title">View Inspection - <span id="inspection-id">INS-12345</span></h1>
-      </div>
+      <div class="task-container margin-top-2">
+        <div class="task-header">
+          <div class="task-header-line"><strong>View Inspection - <span id="header-display-id">#6</span></strong></div>
+        </div>
 
-      <div class="profile-content">
-
-        <div class="inspection-content">
-          <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.6rem;">Inspection Information</h2>
-
-          <div class="inspection-info">
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">ID:</span>
-              <span class="inspection-info__value">INS-2026-A1B2C</span>
+        <div class="task-content-section">
+          <h3>Inspection Information</h3>
+          <hr>
+          <div class="grid-row grid-gap-4">
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Inspection ID</div>
+                <div id="f-inspection-id">6</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Inspection Type</div>
+                <div id="f-inspection-type">Towing Individual</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">AFO Inspection ID</div>
+                <div>
+                  <a href="#" class="usa-link" id="f-afo-inspection-id" target="_blank" rel="noopener noreferrer"><span id="f-afo-inspection-id-text">a4bde8f5-c91d-4b51-be9d-2d90565b4669</span>
+                    <svg aria-hidden="true" focusable="false" class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14">
+                      <path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H176c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+                    </svg>
+                    <span class="usa-sr-only">Opens in a new tab</span>
+                  </a>
+                </div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">AFO Inspection Type Code</div>
+                <div id="f-afo-inspection-type-code">TOWING</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Status</div>
+                <div id="f-status" class="text-bold status-completed">Completed</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Outcome</div>
+                <div id="f-outcome" class="status-denied">Deficient/fail</div>
+              </div>
             </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Type:</span>
-              <span class="inspection-info__value">Initial Shop</span>
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Source</div>
+                <div id="f-source">Submission 771310009509</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Source Type</div>
+                <div id="f-source-type">Submission</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Source Ref</div>
+                <div id="f-source-ref">771310009509</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Subject Name</div>
+                <div id="f-subject-name">771310009509 - Kyle Lemmon</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Subject Contact</div>
+                <div id="f-subject-contact">alex.tate@tylertech.com</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Site Address</div>
+                <div id="f-site-address">5908 London Ave, Kansas City, MO 64151</div>
+              </div>
             </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Due Date:</span>
-              <span class="inspection-info__value">03/15/2024</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Completion Date:</span>
-              <span class="inspection-info__value">03/01/2024</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Inspection Subject:</span>
-              <span class="inspection-info__value">Sarah Johnson</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Inspection Site:</span>
-              <span class="inspection-info__value">100 Congress Ave, Austin, TX 78748</span>
-            </div>
-            <!-- <div class="inspection-info__item">
-              <span class="inspection-info__label">Responsible Party:</span>
-              <span class="inspection-info__value">Sarah Johnson</span>
-            </div> -->
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Origin:</span>
-              <span class="inspection-info__value">Application</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Related Record:</span>
-              <span class="inspection-info__value">Submission - 900091010</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Status:</span>
-              <span class="inspection-info__value status-completed">Complete</span>
-            </div>
-            <div class="inspection-info__item">
-              <span class="inspection-info__label">Outcome:</span>
-              <span class="inspection-info__value status-approved">Passed</span>
-            </div>
-            
           </div>
         </div>
 
+        <div class="task-content-section">
+          <h3>Scheduling Information</h3>
+          <hr>
+          <div class="grid-row grid-gap-4">
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Due Date</div>
+                <div id="f-due-date">07/28/2026</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Scheduled Date</div>
+                <div id="f-scheduled-date">09/30/2026</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Start Date</div>
+                <div id="f-start-date">07/29/2026 09:53 AM</div>
+              </div>
+            </div>
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Completion Date</div>
+                <div id="f-completion-date">07/29/2026 09:54 AM</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Requested Date</div>
+                <div id="f-requested-date">07/28/2026 08:35 PM</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Duration (Minutes)</div>
+                <div id="f-duration">120</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <h3>Assignment Information</h3>
+          <hr>
+          <div class="grid-row grid-gap-4">
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Assigned Inspector ID</div>
+                <div id="f-inspector-id">4080b532-d4ee-4fe1-a3e7-f86db37c85c6</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Assigned Inspector Name</div>
+                <div id="f-inspector-name">Ayyappa Veerapaneni</div>
+              </div>
+            </div>
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Assigned Team ID</div>
+                <div id="f-team-id">0b30a25f-5019-40c3-9443-b29863e77b06</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Assigned Team Name</div>
+                <div id="f-team-name">Towing_Team</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <h3>Event &amp; Notes</h3>
+          <hr>
+          <div class="grid-row grid-gap-4">
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Event</div>
+                <div id="f-event">-</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Event Comments</div>
+                <div id="f-event-comments">-</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Notes</div>
+                <div id="f-notes">New individual towing inspection</div>
+              </div>
+            </div>
+            <div class="tablet:grid-col-6"></div>
+          </div>
+        </div>
+
+        <div class="task-content-section">
+          <h3>System Information</h3>
+          <hr>
+          <div class="grid-row grid-gap-4">
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">Agency ID</div>
+                <div id="f-agency-id">1</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Auth User ID</div>
+                <div id="f-auth-user-id">10</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Parent Inspection ID</div>
+                <div id="f-parent-inspection-id">-</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">AFO RE Mapping ID</div>
+                <div id="f-afo-re-mapping-id">4</div>
+              </div>
+            </div>
+            <div class="tablet:grid-col-6">
+              <div class="detail-field">
+                <div class="text-bold">AFO REIT Mapping ID</div>
+                <div id="f-afo-reit-mapping-id">4</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Created By</div>
+                <div id="f-created-by">alex.adminuser</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Created Date</div>
+                <div id="f-created-date">07/28/2026 08:35 PM</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Updated By</div>
+                <div id="f-updated-by">alex.adminuser</div>
+              </div>
+              <div class="detail-field">
+                <div class="text-bold">Updated Date</div>
+                <div id="f-updated-date">07/29/2026 09:54 AM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding-bottom: 3rem;"></div>
       </div>
 
       <div class="margin-top-2">
-        <a href="individual-profile.html?tab=inspections" class="usa-button" id="close-button">Close</a>
+        <a href="view-inspections.html" class="usa-button usa-button--secondary" id="close-button">Close</a>
       </div>
     </main>
   </div>
 
   <script>
-    // Get tab parameter from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const tab = urlParams.get('tab');
+    // Sample inspection records. In production this data comes from the AFO inspections API.
+    var statusClassMap = {
+      'Completed': 'status-completed', 'In Progress': 'status-in-progress', 'Assigned': 'status-assigned',
+      'In Review': 'status-in-review', 'On Hold': 'status-on-hold', 'Terminated': 'status-terminated'
+    };
+    var outcomeClassMap = {
+      'Pass': 'status-approved', 'Fail': 'status-denied', 'Deficient/fail': 'status-denied'
+    };
 
-    // Update breadcrumb and close button links if tab parameter exists
+    var inspectionData = {
+      '6': {
+        inspectionType: 'Towing Individual', afoInspectionId: 'a4bde8f5-c91d-4b51-be9d-2d90565b4669', afoInspectionTypeCode: 'TOWING',
+        status: 'Completed', outcome: 'Deficient/fail',
+        source: 'Submission 771310009509', sourceType: 'Submission', sourceRef: '771310009509',
+        subjectName: '771310009509 - Kyle Lemmon', subjectContact: 'alex.tate@tylertech.com', siteAddress: '5908 London Ave, Kansas City, MO 64151',
+        dueDate: '07/28/2026', completionDate: '07/29/2026 09:54 AM', scheduledDate: '09/30/2026', requestedDate: '07/28/2026 08:35 PM', startDate: '07/29/2026 09:53 AM', duration: '120',
+        inspectorId: '4080b532-d4ee-4fe1-a3e7-f86db37c85c6', teamId: '0b30a25f-5019-40c3-9443-b29863e77b06', inspectorName: 'Ayyappa Veerapaneni', teamName: 'Towing_Team',
+        event: '-', eventComments: '-', notes: 'New individual towing inspection',
+        agencyId: '1', afoReitMappingId: '4', authUserId: '10', createdBy: 'alex.adminuser', createdDate: '07/28/2026 08:35 PM', parentInspectionId: '-', afoReMappingId: '4', updatedBy: 'alex.adminuser', updatedDate: '07/29/2026 09:54 AM'
+      },
+      'INS-2026-001': {
+        inspectionType: 'Fire Safety', afoInspectionId: 'b7f2a1d4-3c9e-4a6b-8f21-77a9c4de5f10', afoInspectionTypeCode: 'AFO-FIRE-001',
+        status: 'Completed', outcome: 'Pass',
+        source: 'Application APP-2026-12345', sourceType: 'Application', sourceRef: 'APP-2026-12345',
+        subjectName: 'Sarah Johnson', subjectContact: 'sarah.johnson@example.com', siteAddress: '100 Congress Ave, Austin, TX 78748',
+        dueDate: '03/15/2026', completionDate: '03/10/2026 02:15 PM', scheduledDate: '03/08/2026', requestedDate: '02/20/2026 10:00 AM', startDate: '03/10/2026 09:00 AM', duration: '90',
+        inspectorId: '2c9d6a13-5b41-4e7a-9c3d-1f8e6b2a4d70', teamId: '7a1e4f60-2d8b-4c9a-b3e5-9f0a6d2c1b48', inspectorName: 'Marcus Webb', teamName: 'Fire_Safety_Team',
+        event: '-', eventComments: '-', notes: 'Annual fire safety compliance check completed on site.',
+        agencyId: '1', afoReitMappingId: '2', authUserId: '14', createdBy: 'jordan.reyes', createdDate: '02/20/2026 10:00 AM', parentInspectionId: '-', afoReMappingId: '2', updatedBy: 'jordan.reyes', updatedDate: '03/10/2026 02:15 PM'
+      },
+      'INS-2026-002': {
+        inspectionType: 'Water Quality', afoInspectionId: 'd3e8b4c1-6f2a-4d9e-8b17-3a5c9e0d4f62', afoInspectionTypeCode: 'AFO-WATER-002',
+        status: 'In Progress', outcome: '-',
+        source: 'Submission 883217045', sourceType: 'Submission', sourceRef: '883217045',
+        subjectName: 'Lake Springfield Water Treatment Facility', subjectContact: 'facility.manager@springfieldwater.gov', siteAddress: '2100 Lake Shore Dr, Springfield, IL 62701',
+        dueDate: '04/15/2026', completionDate: '-', scheduledDate: '04/10/2026', requestedDate: '03/28/2026 01:45 PM', startDate: '04/10/2026 08:30 AM', duration: '150',
+        inspectorId: '9e4c7a20-1b6d-4f83-a5c9-2e7b0d3a8f14', teamId: '5b0a3d72-8e4c-4a1f-9d6b-3c7e1a0f5b29', inspectorName: 'Denise Park', teamName: 'Water_Quality_Team',
+        event: '-', eventComments: '-', notes: 'Sampling in progress; lab results pending.',
+        agencyId: '1', afoReitMappingId: '5', authUserId: '9', createdBy: 'alex.adminuser', createdDate: '03/28/2026 01:45 PM', parentInspectionId: '-', afoReMappingId: '5', updatedBy: 'denise.park', updatedDate: '04/10/2026 08:30 AM'
+      },
+      'INS-2026-003': {
+        inspectionType: 'License Verification', afoInspectionId: 'f1a6c9e3-4b7d-4c2a-9e8f-6d1b3a0c7e52', afoInspectionTypeCode: 'AFO-LIC-003',
+        status: 'Assigned', outcome: '-',
+        source: 'Application APP-2026-77492', sourceType: 'Application', sourceRef: 'APP-2026-77492',
+        subjectName: 'John Smith', subjectContact: 'j.smith@email.com', siteAddress: '540 Birch Ln, Peoria, IL 61602',
+        dueDate: '04/20/2026', completionDate: '-', scheduledDate: '04/18/2026', requestedDate: '04/02/2026 09:15 AM', startDate: '-', duration: '60',
+        inspectorId: '6d2f8b41-3c9a-4e7d-8b0f-1a5c3e9d2b76', teamId: '3f7a1c95-6e2b-4d8a-9c1f-5b3e0a7d4f18', inspectorName: 'Ray Fontaine', teamName: 'Licensing_Team',
+        event: '-', eventComments: '-', notes: 'Awaiting inspector site visit.',
+        agencyId: '1', afoReitMappingId: '3', authUserId: '11', createdBy: 'alex.adminuser', createdDate: '04/02/2026 09:15 AM', parentInspectionId: '-', afoReMappingId: '3', updatedBy: 'alex.adminuser', updatedDate: '04/02/2026 09:15 AM'
+      },
+      'INS-2025-089': {
+        inspectionType: 'Equipment', afoInspectionId: 'a8c3e6f1-9b4d-4a2c-8e7f-3d1b6a0c9e45', afoInspectionTypeCode: 'AFO-EQUIP-009',
+        status: 'Terminated', outcome: 'Fail',
+        source: 'Submission 651032998', sourceType: 'Submission', sourceRef: '651032998',
+        subjectName: 'DNR Facility A', subjectContact: 'facility.a@dnr.illinois.gov', siteAddress: '1 Natural Resources Way, Springfield, IL 62702',
+        dueDate: '12/15/2025', completionDate: '12/20/2025 11:20 AM', scheduledDate: '12/18/2025', requestedDate: '12/01/2025 03:40 PM', startDate: '12/20/2025 10:00 AM', duration: '45',
+        inspectorId: '4e9b2d76-1a5c-4f83-9e0b-6d3a7c1f8e52', teamId: '8b1e5a30-4d7c-4a9e-8f2b-3c6d0a9e1f47', inspectorName: 'Casey Nguyen', teamName: 'Equipment_Team',
+        event: 'Equipment failure', eventComments: 'Inspection terminated after critical safety violation identified.', notes: 'Facility cited for non-compliant equipment; follow-up inspection required.',
+        agencyId: '1', afoReitMappingId: '6', authUserId: '12', createdBy: 'casey.nguyen', createdDate: '12/01/2025 03:40 PM', parentInspectionId: '-', afoReMappingId: '6', updatedBy: 'casey.nguyen', updatedDate: '12/20/2025 11:20 AM'
+      },
+      'INS-2026-004': {
+        inspectionType: 'Wildlife Habitat', afoInspectionId: 'c5d9a2f7-3e6b-4c1a-9d8f-2b5c7a1e0d64', afoInspectionTypeCode: 'AFO-WILD-005',
+        status: 'In Review', outcome: '-',
+        source: 'Application APP-2026-33988', sourceType: 'Application', sourceRef: 'APP-2026-33988',
+        subjectName: 'Shawnee National Forest', subjectContact: 'ranger.station@shawnee.gov', siteAddress: '50 Highway 145, Harrisburg, IL 62946',
+        dueDate: '03/30/2026', completionDate: '-', scheduledDate: '03/25/2026', requestedDate: '03/05/2026 12:00 PM', startDate: '03/25/2026 07:45 AM', duration: '180',
+        inspectorId: '7c1e4b93-6d2a-4f8b-9c3e-1a7d5b0c2e86', teamId: '2a6d9c14-7b3e-4a1f-8d5c-9e2b0a7f4c31', inspectorName: 'Priya Anand', teamName: 'Wildlife_Team',
+        event: '-', eventComments: '-', notes: 'Habitat survey complete; report under review.',
+        agencyId: '1', afoReitMappingId: '7', authUserId: '13', createdBy: 'priya.anand', createdDate: '03/05/2026 12:00 PM', parentInspectionId: '-', afoReMappingId: '7', updatedBy: 'priya.anand', updatedDate: '03/25/2026 07:45 AM'
+      }
+    };
+
+    function fmtDisplayId(id) {
+      return /^\d+$/.test(id) ? '#' + id : id;
+    }
+
+    function setText(id, value) {
+      var el = document.getElementById(id);
+      if (el) { el.textContent = value; }
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var inspectionId = params.get('id') || '6';
+    var tab = params.get('tab');
+    var d = inspectionData[inspectionId] || inspectionData['6'];
+    if (!inspectionData[inspectionId]) { inspectionId = '6'; }
+    var displayId = fmtDisplayId(inspectionId);
+
+    document.title = 'View Inspection - ' + displayId + ' - RLP';
+    setText('header-display-id', displayId);
+    setText('f-inspection-id', inspectionId);
+    setText('f-inspection-type', d.inspectionType);
+    var afoLink = document.getElementById('f-afo-inspection-id');
+    setText('f-afo-inspection-id-text', d.afoInspectionId);
+    afoLink.href = '#afo-' + d.afoInspectionId;
+    setText('f-afo-inspection-type-code', d.afoInspectionTypeCode);
+
+    var statusEl = document.getElementById('f-status');
+    statusEl.textContent = d.status;
+    statusEl.className = 'text-bold ' + (statusClassMap[d.status] || '');
+
+    var outcomeEl = document.getElementById('f-outcome');
+    outcomeEl.textContent = d.outcome;
+    outcomeEl.className = outcomeClassMap[d.outcome] || '';
+
+    setText('f-source', d.source);
+    setText('f-source-type', d.sourceType);
+    setText('f-source-ref', d.sourceRef);
+    setText('f-subject-name', d.subjectName);
+    setText('f-subject-contact', d.subjectContact);
+    setText('f-site-address', d.siteAddress);
+
+    setText('f-due-date', d.dueDate);
+    setText('f-scheduled-date', d.scheduledDate);
+    setText('f-start-date', d.startDate);
+    setText('f-completion-date', d.completionDate);
+    setText('f-requested-date', d.requestedDate);
+    setText('f-duration', d.duration);
+
+    setText('f-inspector-id', d.inspectorId);
+    setText('f-inspector-name', d.inspectorName);
+    setText('f-team-id', d.teamId);
+    setText('f-team-name', d.teamName);
+
+    setText('f-event', d.event);
+    setText('f-event-comments', d.eventComments);
+    setText('f-notes', d.notes);
+
+    setText('f-agency-id', d.agencyId);
+    setText('f-auth-user-id', d.authUserId);
+    setText('f-parent-inspection-id', d.parentInspectionId);
+    setText('f-afo-re-mapping-id', d.afoReMappingId);
+    setText('f-afo-reit-mapping-id', d.afoReitMappingId);
+    setText('f-created-by', d.createdBy);
+    setText('f-created-date', d.createdDate);
+    setText('f-updated-by', d.updatedBy);
+    setText('f-updated-date', d.updatedDate);
+
+    // Breadcrumb + Close button: differ depending on whether we arrived from the
+    // individual profile's Inspections tab (tab param present) or Settings > View Inspections.
+    var breadcrumbList = document.getElementById('breadcrumb-list');
+    var closeButton = document.getElementById('close-button');
+
     if (tab) {
-      const profileBreadcrumb = document.getElementById('profile-breadcrumb');
-      const closeButton = document.getElementById('close-button');
-
-      profileBreadcrumb.href = `individual-profile.html?tab=${tab}`;
-      closeButton.href = `individual-profile.html?tab=${tab}`;
+      breadcrumbList.innerHTML =
+        '<li class="usa-breadcrumb__list-item"><a href="search.html" class="usa-breadcrumb__link">Back to Submission Search Results</a></li>' +
+        '<li class="usa-breadcrumb__list-item"><a href="individual-profile.html?tab=' + tab + '" class="usa-breadcrumb__link">' + d.subjectName + '</a></li>' +
+        '<li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>View Inspection</span></li>';
+      closeButton.href = 'individual-profile.html?tab=' + tab;
+    } else {
+      breadcrumbList.innerHTML =
+        '<li class="usa-breadcrumb__list-item"><a href="settings.html" class="usa-breadcrumb__link">Settings</a></li>' +
+        '<li class="usa-breadcrumb__list-item"><a href="inspection-menu.html" class="usa-breadcrumb__link">Inspections</a></li>' +
+        '<li class="usa-breadcrumb__list-item"><a href="view-inspections.html" class="usa-breadcrumb__link">Inspections</a></li>' +
+        '<li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>Inspection ' + displayId + '</span></li>';
+      closeButton.href = 'view-inspections.html';
     }
   </script>
 </body>
