@@ -128,7 +128,7 @@
               </div>
               <div class="detail-field">
                 <div class="text-bold">Status</div>
-                <div id="f-status" class="text-bold status-completed">Completed</div>
+                <div id="f-status" class="status-completed">Completed</div>
               </div>
               <div class="detail-field">
                 <div class="text-bold">Outcome</div>
@@ -137,11 +137,11 @@
             </div>
             <div class="tablet:grid-col-6">
               <div class="detail-field">
-                <div class="text-bold">Source</div>
+                <div class="text-bold">Source Type</div>
                 <div id="f-source">Submission 771310009509</div>
               </div>
               <div class="detail-field">
-                <div class="text-bold">Source Type</div>
+                <div class="text-bold">Source Reference</div>
                 <div id="f-source-type">Submission</div>
               </div>
               <div class="detail-field">
@@ -404,7 +404,7 @@
 
     var statusEl = document.getElementById('f-status');
     statusEl.textContent = d.status;
-    statusEl.className = 'text-bold ' + (statusClassMap[d.status] || '');
+    statusEl.className = statusClassMap[d.status] || '';
 
     var outcomeEl = document.getElementById('f-outcome');
     outcomeEl.textContent = d.outcome;
