@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>View Inspections - RLP</title>
+  <title>All Inspections - RLP</title>
   <!-- Custom RLP Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -98,32 +98,32 @@
             <a href="inspection-menu.html" class="usa-breadcrumb__link">Inspections</a>
           </li>
           <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
-            <span>View Inspections</span>
+            <span>All Inspections</span>
           </li>
         </ol>
       </nav>
 
-      <h1 class="page-title page-title--underlined">View Inspections</h1>
+      <h1 class="page-title page-title--underlined">All Inspections</h1>
 
       <div class="margin-top-2">
         <p>Use the search options below to filter inspections.</p>
       </div>
 
       <div class="margin-top-2">
-        <label class="usa-label" for="search-input">Search</label>
+        <label class="usa-label" for="search-input">Subject</label>
         <input class="usa-input" id="search-input" name="search-input" type="text" placeholder="Search inspections...">
       </div>
 
       <div class="grid-row grid-gap-2 margin-top-2">
         <div class="grid-col-5">
-          <label class="usa-label" for="inspection-type-filter">Inspection Code</label>
+          <label class="usa-label" for="inspection-type-filter">Type</label>
           <select class="usa-select" id="inspection-type-filter" name="inspection-type-filter">
             <option value="">Please Select</option>
             <option value="all">All</option>
           </select>
         </div>
         <div class="grid-col-5">
-          <label class="usa-label" for="inspection-status-filter">Inspection Status</label>
+          <label class="usa-label" for="inspection-status-filter">Status</label>
           <select class="usa-select" id="inspection-status-filter" name="inspection-status-filter">
             <option value="">Please Select</option>
             <option value="all">All</option>
@@ -136,7 +136,7 @@
           </select>
         </div>
         <div class="grid-col-5">
-          <label class="usa-label" for="inspection-outcome-filter">Inspection Outcome</label>
+          <label class="usa-label" for="inspection-outcome-filter">Outcome</label>
           <select class="usa-select" id="inspection-outcome-filter" name="inspection-outcome-filter">
             <option value="">Please Select</option>
             <option value="all">All</option>
@@ -170,25 +170,25 @@
         <table class="usa-table usa-table--borderless">
           <thead>
             <tr>
-              <th scope="col" role="columnheader" aria-sort="none">ID <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader" aria-sort="none">Type <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Subject <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader" aria-sort="none">Outcome <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader" aria-sort="none">Due Date <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader" aria-sort="none">Completion Date <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Inspection Subject <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Inspector <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader">Controls</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>INS-2026-001</td>
               <td>Fire Safety</td>
+              <td>Sarah Johnson</td>
+              <td><span class="status-completed">Completed</span></td>
               <td><span class="status-approved">Pass</span></td>
               <td>03/15/2026</td>
               <td>03/10/2026</td>
-              <td>Sarah Johnson</td>
-              <td><span class="status-completed">Completed</span></td>
+              <td>Marcus Webb</td>
               <td>
                 <a href="view-inspection.html?id=INS-2026-001" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -199,13 +199,13 @@
               </td>
             </tr>
             <tr>
-              <td>INS-2026-002</td>
               <td>Water Quality</td>
+              <td>Lake Springfield</td>
+              <td><span class="status-in-progress">In Progress</span></td>
               <td></td>
               <td>04/15/2026</td>
               <td></td>
-              <td>Lake Springfield</td>
-              <td><span class="status-in-progress">In Progress</span></td>
+              <td>Renee Castillo</td>
               <td>
                 <a href="view-inspection.html?id=INS-2026-002" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -216,13 +216,13 @@
               </td>
             </tr>
             <tr>
-              <td>INS-2026-003</td>
               <td>License Verification</td>
+              <td>John Smith</td>
+              <td><span class="status-assigned">Assigned</span></td>
               <td></td>
               <td>04/20/2026</td>
               <td></td>
-              <td>John Smith</td>
-              <td><span class="status-assigned">Assigned</span></td>
+              <td>David Okafor</td>
               <td>
                 <a href="view-inspection.html?id=INS-2026-003" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -233,13 +233,13 @@
               </td>
             </tr>
             <tr>
-              <td>INS-2025-089</td>
               <td>Equipment</td>
+              <td>DNR Facility A</td>
+              <td><span class="status-terminated">Terminated</span></td>
               <td><span class="status-denied">Fail</span></td>
               <td>12/15/2025</td>
               <td>12/20/2025</td>
-              <td>DNR Facility A</td>
-              <td><span class="status-terminated">Terminated</span></td>
+              <td>Priya Nair</td>
               <td>
                 <a href="view-inspection.html?id=INS-2025-089" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -250,13 +250,13 @@
               </td>
             </tr>
             <tr>
-              <td>INS-2026-004</td>
               <td>Wildlife Habitat</td>
+              <td>Shawnee National Forest</td>
+              <td><span class="status-in-review">In Review</span></td>
               <td></td>
               <td>03/30/2026</td>
               <td></td>
-              <td>Shawnee National Forest</td>
-              <td><span class="status-in-review">In Review</span></td>
+              <td>Thomas Reilly</td>
               <td>
                 <a href="view-inspection.html?id=INS-2026-004" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
