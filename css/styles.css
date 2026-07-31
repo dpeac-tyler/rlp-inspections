@@ -856,6 +856,23 @@ select:focus {
   color: #5C5F66;
 }
 
+/* Tag
+   ========================================================================== */
+
+.usa-tag {
+  background-color: #565c65;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: "Public Sans Web", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1;
+  padding: 0.3rem 0.7rem;
+  text-transform: uppercase;
+}
+
 /* Pagination
    ========================================================================== */
 
