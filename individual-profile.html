@@ -306,13 +306,7 @@
                       <button type="button" class="usa-button usa-button--outline category-filter-btn active" data-category="Application">Application</button>
                     </li>
                     <li class="usa-button-group__item">
-                      <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Case">Case</button>
-                    </li>
-                    <li class="usa-button-group__item">
                       <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Field">Field</button>
-                    </li>
-                    <li class="usa-button-group__item">
-                      <button type="button" class="usa-button usa-button--outline category-filter-btn" data-category="Routine">Routine</button>
                     </li>
                   </ul>
                 </div>
@@ -323,52 +317,42 @@
                   <strong id="inspection-count">Showing 1 - 2 of 2 Entries</strong>
                 </div>
                 <div class="table-controls__right">
+                  <!-- Set Column Headers control (disabled for now, kept for future reference)
                   <label for="column-header-select" class="table-controls__label">Set Column Headers</label>
                   <div class="column-header-dropdown">
                     <button type="button" class="column-header-select" id="column-header-select">Please Select</button>
                     <div class="column-header-menu" hidden>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="0" checked>
-                        <span>ID</span>
-                      </label>
-                      <label class="column-header-option">
-                        <input type="checkbox" class="column-checkbox" data-column="1" checked>
                         <span>Type</span>
                       </label>
                       <label class="column-header-option">
+                        <input type="checkbox" class="column-checkbox" data-column="1" checked>
+                        <span>Subject</span>
+                      </label>
+                      <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="2" checked>
-                        <span>Outcome</span>
+                        <span>Status</span>
                       </label>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="3" checked>
-                        <span>Due Date</span>
+                        <span>Outcome</span>
                       </label>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="4" checked>
-                        <span>Completion Date</span>
+                        <span>Due Date</span>
                       </label>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="5" checked>
-                        <span>Inspection Subject</span>
+                        <span>Completion Date</span>
                       </label>
                       <label class="column-header-option">
-                        <input type="checkbox" class="column-checkbox" data-column="6">
-                        <span>Inspection Site</span>
-                      </label>
-                      <label class="column-header-option">
-                        <input type="checkbox" class="column-checkbox" data-column="7">
-                        <span>Origin</span>
-                      </label>
-                      <label class="column-header-option">
-                        <input type="checkbox" class="column-checkbox" data-column="8">
-                        <span>Related Record</span>
-                      </label>
-                      <label class="column-header-option">
-                        <input type="checkbox" class="column-checkbox" data-column="9" checked>
-                        <span>Status</span>
+                        <input type="checkbox" class="column-checkbox" data-column="6" checked>
+                        <span>Inspector</span>
                       </label>
                     </div>
                   </div>
+                  -->
                   <label for="entries-per-page-inspections" class="table-controls__label">Show</label>
                   <select class="usa-select table-controls__select" id="entries-per-page-inspections" name="entries-per-page-inspections">
                     <option value="100" selected>100</option>
@@ -382,91 +366,25 @@
               <table class="usa-table usa-table--borderless" id="inspections-table">
                 <thead>
                   <tr>
-                    <th scope="col" role="columnheader" aria-sort="none">ID <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Type <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Subject <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Outcome <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Due Date <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Completion Date <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none">Inspection Subject <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Inspection Site <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Origin <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none" style="display: none;">Related Record <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Inspector <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader">Controls</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr data-category="Application">
-                    <td>INS-2026-001</td>
                     <td>Fire Safety</td>
+                    <td>Sarah Johnson</td>
+                    <td><span class="status-completed">Completed</span></td>
                     <td><span class="status-approved">Pass</span></td>
                     <td>03/15/2026</td>
                     <td>03/10/2026</td>
-                    <td>Sarah Johnson</td>
-                    <td style="display: none;">100 Congress Ave, Austin, TX 78748</td>
-                    <td style="display: none;">Application</td>
-                    <td style="display: none;">APP-2026-12345</td>
-                    <td><span class="status-completed">Completed</span></td>
-                    <td>
-                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
-                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                      </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
-                    </td>
-                  </tr>
-                  <tr data-category="Routine">
-                    <td>INS-2026-002</td>
-                    <td>Water Quality</td>
-                    <td></td>
-                    <td>04/15/2026</td>
-                    <td></td>
-                    <td>Lake Springfield</td>
-                    <td style="display: none;">Lake Springfield, IL 62707</td>
-                    <td style="display: none;">Routine</td>
-                    <td style="display: none;">ROU-2026-Q2</td>
-                    <td><span class="status-in-progress">In Progress</span></td>
-                    <td>
-                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
-                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                      </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
-                    </td>
-                  </tr>
-                  <tr data-category="Application">
-                    <td>INS-2026-003</td>
-                    <td>License Verification</td>
-                    <td></td>
-                    <td>04/20/2026</td>
-                    <td></td>
-                    <td>John Smith</td>
-                    <td style="display: none;">456 Oak Street, Springfield, IL 62701</td>
-                    <td style="display: none;">Application</td>
-                    <td style="display: none;">APP-2026-12346</td>
-                    <td><span class="status-assigned">Assigned</span></td>
-                    <td>
-                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
-                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                      </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
-                    </td>
-                  </tr>
-                  <tr data-category="Case">
-                    <td>INS-2025-089</td>
-                    <td>Equipment</td>
-                    <td><span class="status-denied">Fail</span></td>
-                    <td>12/15/2025</td>
-                    <td>12/20/2025</td>
-                    <td>DNR Facility A</td>
-                    <td style="display: none;">200 Industrial Park, Chicago, IL 60601</td>
-                    <td style="display: none;">Case</td>
-                    <td style="display: none;">CAS-2025-0456</td>
-                    <td><span class="status-terminated">Terminated</span></td>
+                    <td>Marcus Webb</td>
                     <td>
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -477,16 +395,64 @@
                     </td>
                   </tr>
                   <tr data-category="Field">
-                    <td>INS-2026-004</td>
+                    <td>Water Quality</td>
+                    <td>Lake Springfield</td>
+                    <td><span class="status-in-progress">In Progress</span></td>
+                    <td></td>
+                    <td>04/15/2026</td>
+                    <td></td>
+                    <td>Renee Castillo</td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Application">
+                    <td>License Verification</td>
+                    <td>John Smith</td>
+                    <td><span class="status-assigned">Assigned</span></td>
+                    <td></td>
+                    <td>04/20/2026</td>
+                    <td></td>
+                    <td>David Okafor</td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Application">
+                    <td>Equipment</td>
+                    <td>DNR Facility A</td>
+                    <td><span class="status-terminated">Terminated</span></td>
+                    <td><span class="status-denied">Fail</span></td>
+                    <td>12/15/2025</td>
+                    <td>12/20/2025</td>
+                    <td>Priya Nair</td>
+                    <td>
+                      <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
+                        <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                      </a>
+                      <a href="#" class="icon-button" aria-label="Edit Inspection">
+                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr data-category="Field">
                     <td>Wildlife Habitat</td>
+                    <td>Shawnee National Forest</td>
+                    <td><span class="status-in-review">In Review</span></td>
                     <td></td>
                     <td>03/30/2026</td>
                     <td></td>
-                    <td>Shawnee National Forest</td>
-                    <td style="display: none;">Shawnee National Forest, IL 62995</td>
-                    <td style="display: none;">Field</td>
-                    <td style="display: none;">FLD-2026-0078</td>
-                    <td><span class="status-in-review">In Review</span></td>
+                    <td>Thomas Reilly</td>
                     <td>
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
@@ -646,55 +612,58 @@
       return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
-    // Column header dropdown functionality
+    // Column header dropdown functionality (markup currently commented out above; keep this
+    // wired for when the "Set Column Headers" control is reintroduced)
     const columnHeaderSelect = document.querySelector('.column-header-select');
     const columnHeaderMenu = document.querySelector('.column-header-menu');
     const columnCheckboxes = document.querySelectorAll('.column-checkbox');
     const inspectionsTable = document.getElementById('inspections-table');
 
-    // Toggle dropdown
-    columnHeaderSelect.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const isHidden = columnHeaderMenu.hasAttribute('hidden');
-      if (isHidden) {
-        columnHeaderMenu.removeAttribute('hidden');
-      } else {
-        columnHeaderMenu.setAttribute('hidden', '');
-      }
-    });
-
-    // Prevent dropdown from closing when clicking inside it
-    columnHeaderMenu.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function() {
-      columnHeaderMenu.setAttribute('hidden', '');
-    });
-
-    // Handle column visibility
-    columnCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function() {
-        const columnIndex = parseInt(this.dataset.column);
-        const isChecked = this.checked;
-
-        // Toggle header visibility
-        const headers = inspectionsTable.querySelectorAll('thead th');
-        if (headers[columnIndex]) {
-          headers[columnIndex].style.display = isChecked ? '' : 'none';
+    if (columnHeaderSelect && columnHeaderMenu) {
+      // Toggle dropdown
+      columnHeaderSelect.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isHidden = columnHeaderMenu.hasAttribute('hidden');
+        if (isHidden) {
+          columnHeaderMenu.removeAttribute('hidden');
+        } else {
+          columnHeaderMenu.setAttribute('hidden', '');
         }
+      });
 
-        // Toggle cell visibility in all rows
-        const rows = inspectionsTable.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-          const cells = row.querySelectorAll('td');
-          if (cells[columnIndex]) {
-            cells[columnIndex].style.display = isChecked ? '' : 'none';
+      // Prevent dropdown from closing when clicking inside it
+      columnHeaderMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function() {
+        columnHeaderMenu.setAttribute('hidden', '');
+      });
+
+      // Handle column visibility
+      columnCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+          const columnIndex = parseInt(this.dataset.column);
+          const isChecked = this.checked;
+
+          // Toggle header visibility
+          const headers = inspectionsTable.querySelectorAll('thead th');
+          if (headers[columnIndex]) {
+            headers[columnIndex].style.display = isChecked ? '' : 'none';
           }
+
+          // Toggle cell visibility in all rows
+          const rows = inspectionsTable.querySelectorAll('tbody tr');
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells[columnIndex]) {
+              cells[columnIndex].style.display = isChecked ? '' : 'none';
+            }
+          });
         });
       });
-    });
+    }
   </script>
 </body>
 </html>
