@@ -151,7 +151,26 @@
         <button type="button" class="usa-button usa-button--outline">Clear</button>
       </div>
 
-      <div class="margin-top-4">
+      <div style="margin-top: 3.2rem;">
+        <div class="usa-accordion usa-accordion--bordered">
+          <h3 class="usa-accordion__heading">
+            <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="icon-key-content">
+              Icon Key
+            </button>
+          </h3>
+          <div id="icon-key-content" class="usa-accordion__content usa-prose" hidden>
+            <p class="text-bold margin-0 margin-bottom-2">Options and Control Types</p>
+            <div class="icon-key-grid">
+              <div class="icon-key-item">
+                <img src="assets/eye-icon.png" alt="" width="24" height="24">
+                <span>- View Inspection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-top-2">
         <div class="table-controls">
           <div class="table-controls__left">
             <strong>Showing 1 - 5 of 5 Entries</strong>
@@ -193,9 +212,6 @@
                 <a href="view-inspection.html?id=INS-2026-001" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                </a>
               </td>
             </tr>
             <tr>
@@ -209,9 +225,6 @@
               <td>
                 <a href="view-inspection.html?id=INS-2026-002" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
               </td>
             </tr>
@@ -227,9 +240,6 @@
                 <a href="view-inspection.html?id=INS-2026-003" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                </a>
               </td>
             </tr>
             <tr>
@@ -244,9 +254,6 @@
                 <a href="view-inspection.html?id=INS-2025-089" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                </a>
               </td>
             </tr>
             <tr>
@@ -260,9 +267,6 @@
               <td>
                 <a href="view-inspection.html?id=INS-2026-004" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
               </td>
             </tr>
@@ -296,6 +300,22 @@
         select.appendChild(option);
       });
     })();
+
+    // Accordion functionality
+    document.querySelectorAll('.usa-accordion__button').forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(this.getAttribute('aria-controls'));
+
+        if (expanded) {
+          this.setAttribute('aria-expanded', 'false');
+          content.setAttribute('hidden', '');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('hidden');
+        }
+      });
+    });
   </script>
 </body>
 </html>
