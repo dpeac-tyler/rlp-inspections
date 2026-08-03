@@ -291,8 +291,8 @@
                     <span>- View Inspection</span>
                   </div>
                   <div class="icon-key-item">
-                    <img src="assets/edit-icon.png" alt="" width="24" height="24">
-                    <span>- Manage Inspection (External Link)</span>
+                    <img src="assets/lock-solid-full 1.png" alt="" width="24" height="24">
+                    <span>- Visibility: Agency Only</span>
                   </div>
                 </div>
               </div>
@@ -328,7 +328,7 @@
                       </label>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="1" checked>
-                        <span>Subject</span>
+                        <span>Source</span>
                       </label>
                       <label class="column-header-option">
                         <input type="checkbox" class="column-checkbox" data-column="2" checked>
@@ -367,7 +367,7 @@
                 <thead>
                   <tr>
                     <th scope="col" role="columnheader" aria-sort="none">Type <span class="sort-arrows"></span></th>
-                    <th scope="col" role="columnheader" aria-sort="none">Subject <span class="sort-arrows"></span></th>
+                    <th scope="col" role="columnheader" aria-sort="none">Source <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Outcome <span class="sort-arrows"></span></th>
                     <th scope="col" role="columnheader" aria-sort="none">Due Date <span class="sort-arrows"></span></th>
@@ -378,8 +378,13 @@
                 </thead>
                 <tbody>
                   <tr data-category="Application">
-                    <td>Fire Safety</td>
-                    <td>Sarah Johnson</td>
+                    <td>Fire Safety <a href="#" class="usa-link" target="_blank" rel="noopener noreferrer">AFO Inspection
+                      <svg aria-hidden="true" focusable="false" class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14">
+                        <path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H176c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+                      </svg>
+                      <span class="usa-sr-only">Opens in a new tab</span>
+                    </a></td>
+                    <td>Submission - 900105773</td>
                     <td><span class="status-completed">Completed</span></td>
                     <td><span class="status-approved">Pass</span></td>
                     <td>03/15/2026</td>
@@ -389,14 +394,11 @@
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
                       </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
                     </td>
                   </tr>
                   <tr data-category="Field">
                     <td>Water Quality</td>
-                    <td>Lake Springfield</td>
+                    <td>License - 00000318</td>
                     <td><span class="status-in-progress">In Progress</span></td>
                     <td></td>
                     <td>04/15/2026</td>
@@ -406,14 +408,11 @@
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
                       </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
                     </td>
                   </tr>
                   <tr data-category="Application">
-                    <td>License Verification</td>
-                    <td>John Smith</td>
+                    <td><img src="assets/lock-solid-full 1.png" alt="Agency Only" width="16" height="16" style="vertical-align: middle; margin-right: 8px;">License Verification</td>
+                    <td>License - 00000251</td>
                     <td><span class="status-assigned">Assigned</span></td>
                     <td></td>
                     <td>04/20/2026</td>
@@ -423,14 +422,11 @@
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
                       </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
                     </td>
                   </tr>
                   <tr data-category="Application">
-                    <td>Equipment</td>
-                    <td>DNR Facility A</td>
+                    <td>Equipment <span class="usa-tag">Reinspection</span></td>
+                    <td>Submission - 900105790</td>
                     <td><span class="status-terminated">Terminated</span></td>
                     <td><span class="status-denied">Fail</span></td>
                     <td>12/15/2025</td>
@@ -440,14 +436,11 @@
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
                       </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                      </a>
                     </td>
                   </tr>
                   <tr data-category="Field">
                     <td>Wildlife Habitat</td>
-                    <td>Shawnee National Forest</td>
+                    <td>Submission - 900105812</td>
                     <td><span class="status-in-review">In Review</span></td>
                     <td></td>
                     <td>03/30/2026</td>
@@ -456,9 +449,6 @@
                     <td>
                       <a href="view-inspection.html?tab=inspections" class="icon-button" aria-label="View Inspection">
                         <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                      </a>
-                      <a href="#" class="icon-button" aria-label="Edit Inspection">
-                        <img src="assets/edit-icon.png" alt="" width="30" height="30">
                       </a>
                     </td>
                   </tr>
