@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Inspection Type - RLP</title>
+  <title>Create Inspection Type - RLP</title>
   <!-- Custom RLP Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -101,13 +101,13 @@
             <a href="inspections.html" class="usa-breadcrumb__link">Inspection Types</a>
           </li>
           <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
-            <span>Add Inspection Type</span>
+            <span>Create Inspection Type</span>
           </li>
         </ol>
       </nav>
 
       <div class="profile-header">
-        <h1 class="profile-header__title">Add Inspection Type</h1>
+        <h1 class="profile-header__title">Create Inspection Type</h1>
       </div>
 
       <!-- Error Alert -->
@@ -121,16 +121,16 @@
       <div class="profile-content">
         <div class="inspection-content">
           <div class="margin-bottom-4" id="inspection-type-group">
-            <label class="usa-label" for="inspection-type">Inspection Code <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-type-error" hidden>Select an inspection code</span>
+            <label class="usa-label" for="inspection-type">Code <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-type-error" hidden>Select a code</span>
             <select class="usa-select" id="inspection-type" name="inspection-type" required>
               <option value="">Please Select</option>
             </select>
           </div>
 
           <div class="margin-bottom-4" id="inspection-team-group" hidden>
-            <label class="usa-label" for="inspection-team">Inspection Team <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-team-error" hidden>Select an inspection team</span>
+            <label class="usa-label" for="inspection-team">Team <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-team-error" hidden>Select a team</span>
             <select class="usa-select" id="inspection-team" name="inspection-team">
               <option value="">Please Select</option>
               <option value="team-1">Team 1</option>
@@ -140,7 +140,7 @@
           </div>
 
           <div class="margin-bottom-4" id="license-type-group" hidden>
-            <label class="usa-label" for="license-type">License Type</label>
+            <label class="usa-label" for="license-type">Type</label>
             <select class="usa-select" id="license-type" name="license-type">
               <option value="">Please Select</option>
               <option value="firearm-business">Firearm Business License</option>
@@ -152,8 +152,8 @@
           </div>
 
           <div class="margin-bottom-4" id="inspection-name-group">
-            <label class="usa-label" for="inspection-name">Inspection Name <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-name-error" hidden>Enter an inspection name</span>
+            <label class="usa-label" for="inspection-name">Name <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-name-error" hidden>Enter a name</span>
             <input class="usa-input" id="inspection-name" name="inspection-name" type="text" required>
           </div>
 
