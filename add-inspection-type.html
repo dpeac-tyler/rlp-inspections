@@ -120,6 +120,12 @@
 
       <div class="profile-content">
         <div class="inspection-content">
+          <div class="margin-bottom-4" id="inspection-name-group">
+            <label class="usa-label" for="inspection-name">Name <span class="field-required">Required</span></label>
+            <span class="usa-error-message" id="inspection-name-error" hidden>Enter a name</span>
+            <input class="usa-input" id="inspection-name" name="inspection-name" type="text" required>
+          </div>
+
           <div class="margin-bottom-4" id="inspection-type-group">
             <label class="usa-label" for="inspection-type">Code <span class="field-required">Required</span></label>
             <span class="usa-error-message" id="inspection-type-error" hidden>Select a code</span>
@@ -149,12 +155,6 @@
               <option value="fishing-guide">Fishing Guide Permit</option>
               <option value="wildlife-rehab">Wildlife Rehabilitation</option>
             </select>
-          </div>
-
-          <div class="margin-bottom-4" id="inspection-name-group">
-            <label class="usa-label" for="inspection-name">Name <span class="field-required">Required</span></label>
-            <span class="usa-error-message" id="inspection-name-error" hidden>Enter a name</span>
-            <input class="usa-input" id="inspection-name" name="inspection-name" type="text" required>
           </div>
 
           <div class="margin-bottom-4">
@@ -202,12 +202,12 @@
               <fieldset class="usa-fieldset">
                 <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
                 <div class="usa-radio">
-                  <input class="usa-radio__input" id="visibility-internal" type="radio" name="visibility" value="internal" checked>
-                  <label class="usa-radio__label" for="visibility-internal">Internal</label>
+                  <input class="usa-radio__input" id="visibility-agency-only" type="radio" name="visibility" value="agency-only" checked>
+                  <label class="usa-radio__label" for="visibility-agency-only">Agency Only</label>
                 </div>
                 <div class="usa-radio">
-                  <input class="usa-radio__input" id="visibility-public" type="radio" name="visibility" value="public">
-                  <label class="usa-radio__label" for="visibility-public">Public</label>
+                  <input class="usa-radio__input" id="visibility-agency-constituent" type="radio" name="visibility" value="agency-constituent">
+                  <label class="usa-radio__label" for="visibility-agency-constituent">Agency and Constituent</label>
                 </div>
               </fieldset>
             </div>

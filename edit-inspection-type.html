@@ -202,12 +202,12 @@
               <fieldset class="usa-fieldset">
                 <legend class="usa-legend">Visibility <span class="field-required">Required</span></legend>
                 <div class="usa-radio">
-                  <input class="usa-radio__input" id="visibility-internal" type="radio" name="visibility" value="internal" checked>
-                  <label class="usa-radio__label" for="visibility-internal">Internal</label>
+                  <input class="usa-radio__input" id="visibility-agency-only" type="radio" name="visibility" value="agency-only" checked>
+                  <label class="usa-radio__label" for="visibility-agency-only">Agency Only</label>
                 </div>
                 <div class="usa-radio">
-                  <input class="usa-radio__input" id="visibility-public" type="radio" name="visibility" value="public">
-                  <label class="usa-radio__label" for="visibility-public">Public</label>
+                  <input class="usa-radio__input" id="visibility-agency-constituent" type="radio" name="visibility" value="agency-constituent">
+                  <label class="usa-radio__label" for="visibility-agency-constituent">Agency and Constituent</label>
                 </div>
               </fieldset>
             </div>
@@ -469,10 +469,10 @@
       }
 
       if (record.visibility === 'Public') {
-        document.getElementById('visibility-public').checked = true;
+        document.getElementById('visibility-agency-constituent').checked = true;
       } else {
         // "Internal" and "Agency Only" both map to the closest available option
-        document.getElementById('visibility-internal').checked = true;
+        document.getElementById('visibility-agency-only').checked = true;
       }
     })();
 
