@@ -91,87 +91,177 @@
     <main id="main-content" class="grid-container">
       <h1 class="page-title page-title--underlined">Settings</h1>
 
-      <div class="agency-home-cards grid-row grid-gap-2 margin-top-2 minh-card-lg">
-        <!-- Card 1: Agency Profile -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Agency Profile</h2>
-            <p>View and Edit Agency Profile.</p>
-          </a>
+      <div class="grid-row grid-gap-4 margin-top-2">
+
+        <!-- Side Navigation -->
+        <div class="tablet:grid-col-3">
+          <nav aria-label="Settings navigation" class="settings-sidenav">
+            <ul class="usa-sidenav">
+              <li class="usa-sidenav__item">
+                <a href="#" class="usa-current" data-filter="all">All settings</a>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="#" data-filter="agency-information">Agency Information <span class="settings-sidenav__count">4</span></a>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="#" data-filter="application-processing">Application Processing <span class="settings-sidenav__count">3</span></a>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="#" data-filter="communications">Communications <span class="settings-sidenav__count">1</span></a>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="#" data-filter="system-administration">System Administration <span class="settings-sidenav__count">3</span></a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <!-- Card 2: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Application Contact</h2>
-            <p>View and Edit Agency Contact Information</p>
-          </a>
+        <!-- Tile Grid -->
+        <div class="tablet:grid-col-9">
+          <div class="agency-home-cards grid-row grid-gap-2">
+
+            <!-- Agency Profile -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="agency-information">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Agency Profile</h2>
+                <p>View and Edit Agency Profile.</p>
+              </a>
+            </div>
+
+            <!-- Appeals -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="application-processing">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Appeals</h2>
+                <p>View, Edit and Add Appeals Information</p>
+              </a>
+            </div>
+
+            <!-- Application Contact -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="agency-information">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Application Contact</h2>
+                <p>View and Edit Agency Contact Information</p>
+              </a>
+            </div>
+
+            <!-- Assets -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="agency-information">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Assets</h2>
+                <p>View and Edit Assets</p>
+              </a>
+            </div>
+
+            <!-- Configurations -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="system-administration">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Configurations</h2>
+                <p>View Agency Configurations</p>
+              </a>
+            </div>
+
+            <!-- Correspondence -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="communications">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Correspondence</h2>
+                <p>View, Edit and Add Email and Letter Templates.</p>
+              </a>
+            </div>
+
+            <!-- Denials -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="application-processing">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Denials</h2>
+                <p>View, Edit and Add Denial Information</p>
+              </a>
+            </div>
+
+            <!-- Inspections -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="application-processing">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="inspection-menu.html"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Inspections</h2>
+                <p>View and Manage Inspections</p>
+              </a>
+            </div>
+
+            <!-- Key Contacts -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="agency-information">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Key Contacts</h2>
+                <p>View, Edit and Add Agency Key Contacts</p>
+              </a>
+            </div>
+
+            <!-- Logs -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="system-administration">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Logs</h2>
+                <p>View Log Information</p>
+              </a>
+            </div>
+
+            <!-- Users/Groups -->
+            <div class="settings-tile minh-card-lg margin-top-2 tablet:grid-col-4" data-category="system-administration">
+              <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
+                 href="#"
+                 style="display:block; text-decoration:none;">
+                <h2 class="font-family-sans text-bold margin-0">Users/Groups</h2>
+                <p>View and Edit Agency Users and Groups</p>
+              </a>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Card 3: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Configurations</h2>
-            <p>View Agency Configurations</p>
-          </a>
-        </div>
-
-        <!-- Card 4: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Assets</h2>
-            <p>View and Edit Assets</p>
-          </a>
-        </div>
-
-         <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="inspection-menu.html"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Inspections</h2>
-            <p>View and Manage Inspections</p>
-          </a>
-        </div>
-
-        <!-- Card 5: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Key Contacts</h2>
-            <p>View, Edit and Add Agency Key Contacts</p>
-          </a>
-        </div>
-
-        <!-- Card 6: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Logs</h2>
-            <p>View Log Information</p>
-          </a>
-        </div>
-
-        <!-- Card 7: Placeholder -->
-        <div class="minh-card-lg margin-top-2 tablet:grid-col-4">
-          <a class="simple-card bg-base-lightest padding-2 height-full display-flex flex-column flex-1"
-             href="#"
-             style="display:block; text-decoration:none;">
-            <h2 class="font-family-sans text-bold margin-0">Uers/Groups</h2>
-            <p>View and Edit Agency Users and Groups</p>
-          </a>
-        </div>
       </div>
     </main>
   </div>
+
+  <script>
+    (function () {
+      var navLinks = document.querySelectorAll('.settings-sidenav [data-filter]');
+      var tiles = document.querySelectorAll('.settings-tile');
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var filter = this.getAttribute('data-filter');
+
+          // Update active state
+          navLinks.forEach(function (l) { l.classList.remove('usa-current'); });
+          this.classList.add('usa-current');
+
+          // Show/hide tiles
+          tiles.forEach(function (tile) {
+            if (filter === 'all' || tile.getAttribute('data-category') === filter) {
+              tile.style.display = '';
+            } else {
+              tile.style.display = 'none';
+            }
+          });
+        });
+      });
+    }());
+  </script>
 </body>
 </html>

@@ -293,6 +293,10 @@ p {
 }
 
 .minh-card-lg {
+  min-height: 12rem;
+}
+
+.agency-home-cards--index .minh-card-lg {
   min-height: 24rem;
 }
 
@@ -424,6 +428,11 @@ fieldset.margin-bottom-4  {
     flex: 1 1 0%;
   }
 
+  .tablet\:grid-col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
   .tablet\:grid-col-4 {
     flex: 0 0 auto;
     width: 33.33333%;
@@ -434,10 +443,25 @@ fieldset.margin-bottom-4  {
     width: 50%;
   }
 
+  .tablet\:grid-col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
   .tablet\:grid-col-auto {
     flex: 0 0 auto;
     width: auto;
   }
+}
+
+.grid-row.grid-gap-4 {
+  margin-left: -1.6rem;
+  margin-right: -1.6rem;
+}
+
+.grid-row.grid-gap-4 > * {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 /* Grid Columns
@@ -2396,4 +2420,58 @@ select:focus {
   font-size: 1.4rem;
   font-style: italic;
   color: #71767a;
+}
+
+/* Settings side navigation */
+.settings-sidenav .usa-sidenav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #dfe1e2;
+}
+
+.settings-sidenav .usa-sidenav__item {
+  border-top: 1px solid #dfe1e2;
+}
+
+.settings-sidenav .usa-sidenav__item:first-child {
+  border-top: none;
+}
+
+.settings-sidenav .usa-sidenav__item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1rem;
+  color: #005ea2;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  margin-left: -1px;
+}
+
+.settings-sidenav .usa-sidenav__item a:hover {
+  background-color: #f0f0f0;
+  color: #005ea2;
+  text-decoration: none;
+}
+
+.settings-sidenav .usa-sidenav__item a.usa-current {
+  color: #1b1b1b;
+  font-weight: 700;
+  border-left-color: #005ea2;
+  background-color: transparent;
+}
+
+.settings-sidenav__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.4rem;
+  color: #1b1b1b;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  flex-shrink: 0;
 }
