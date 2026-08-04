@@ -1749,6 +1749,26 @@ select:focus {
   padding: 2rem;
 }
 
+.inspection-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.inspection-info__item {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.inspection-info__label {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.inspection-info__value {
+  font-weight: normal;
+}
+
 .detail-field {
   margin-bottom: 2rem;
 }

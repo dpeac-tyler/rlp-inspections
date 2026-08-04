@@ -123,13 +123,17 @@
                 <img src="assets/edit-icon.png" alt="" width="24" height="24">
                 <span>- Edit Inspection</span>
               </div>
+              <div class="icon-key-item">
+                <img src="assets/lock-solid-full 1.png" alt="" width="24" height="24">
+                <span>- Visibility: Agency Only</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="margin-top-2">
-        <a href="add-inspection-type.html" class="usa-button">Add Inspection Type</a>
+        <a href="add-inspection-type.html" class="usa-button">Create Inspection Type</a>
       </div>
 
       <div class="margin-top-2">
@@ -151,50 +155,30 @@
         <table class="usa-table usa-table--borderless usa-table--striped">
           <thead>
             <tr>
-              <th scope="col" role="columnheader" aria-sort="none">Inspection Code <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Inspection Name <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Description <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Name <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Code <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">License <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Team <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader" aria-sort="none">Status <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Applies To <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Visibility <span class="sort-arrows"></span></th>
-              <th scope="col" role="columnheader" aria-sort="none">Billable Type <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Modified By <span class="sort-arrows"></span></th>
+              <th scope="col" role="columnheader" aria-sort="none">Modified Date <span class="sort-arrows"></span></th>
               <th scope="col" role="columnheader">Controls</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Initial Shop</td>
-              <td>Fire Safety Inspection</td>
-              <td>Annual fire safety and compliance review</td>
-              <td><span class="status-active">Active</span></td>
-              <td>Application, Case</td>
-              <td>Public</td>
-              <td>Single Invoice</td>
-              <td>
-                <a href="#" class="icon-button" aria-label="View Inspection">
-                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
-                </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
-                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
-                </a>
-                <a href="#" class="icon-button" aria-label="Delete Inspection">
-                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>Health & Safety</td>
-              <td>Water Quality Assessment</td>
+              <td><span class="cell-text">Fire Safety Inspection</span></td>
+              <td>AFO-FIRE-001</td>
+              <td>Contractor License</td>
               <td></td>
               <td><span class="status-active">Active</span></td>
-              <td>Routine</td>
-              <td>Internal</td>
-              <td>None</td>
+              <td>Marcus Webb</td>
+              <td>03/10/2026</td>
               <td>
-                <a href="#" class="icon-button" aria-label="View Inspection">
+                <a href="view-inspection-type.html?id=AFO-FIRE-001" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                <a href="edit-inspection-type.html?id=AFO-FIRE-001" class="icon-button" aria-label="Edit Inspection">
                   <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
                 <a href="#" class="icon-button" aria-label="Delete Inspection">
@@ -203,18 +187,18 @@
               </td>
             </tr>
             <tr>
-              <td>Initial Shop</td>
-              <td>License Verification</td>
-              <td>Verify current license and permit status</td>
+              <td><span class="cell-text">Water Quality Assessment</span></td>
+              <td>AFO-WATER-002</td>
+              <td>Professional Engineer</td>
+              <td></td>
               <td><span class="status-active">Active</span></td>
-              <td>Application</td>
-              <td>Public</td>
-              <td>Batch Invoice</td>
+              <td>Renee Castillo</td>
+              <td>04/15/2026</td>
               <td>
-                <a href="#" class="icon-button" aria-label="View Inspection">
+                <a href="view-inspection-type.html?id=AFO-WATER-002" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                <a href="edit-inspection-type.html?id=AFO-WATER-002" class="icon-button" aria-label="Edit Inspection">
                   <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
                 <a href="#" class="icon-button" aria-label="Delete Inspection">
@@ -223,18 +207,38 @@
               </td>
             </tr>
             <tr>
-              <td>Health & Safety</td>
-              <td>Equipment Inspection</td>
-              <td>Inspect all equipment for proper operation</td>
+              <td><img src="assets/lock-solid-full 1.png" alt="Agency Only" width="16" height="16" style="vertical-align: middle; margin-right: 8px;"><span class="cell-text">License Verification</span></td>
+              <td>AFO-LIC-003</td>
+              <td>Fishing Guide Permit</td>
+              <td></td>
+              <td><span class="status-active">Active</span></td>
+              <td>David Okafor</td>
+              <td>04/20/2026</td>
+              <td>
+                <a href="view-inspection-type.html?id=AFO-LIC-003" class="icon-button" aria-label="View Inspection">
+                  <img src="assets/eye-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="edit-inspection-type.html?id=AFO-LIC-003" class="icon-button" aria-label="Edit Inspection">
+                  <img src="assets/edit-icon.png" alt="" width="30" height="30">
+                </a>
+                <a href="#" class="icon-button" aria-label="Delete Inspection">
+                  <img src="assets/icon-delete.png" alt="" width="30" height="30">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-text">Equipment Inspection</span></td>
+              <td>AFO-EQUIP-004</td>
+              <td>Contractor License</td>
+              <td></td>
               <td><span class="status-inactive">Inactive</span></td>
-              <td>Case, Field Observation</td>
-              <td>Internal</td>
-              <td>None</td>
+              <td>Priya Nair</td>
+              <td>12/20/2025</td>
               <td>
-                <a href="#" class="icon-button" aria-label="View Inspection">
+                <a href="view-inspection-type.html?id=AFO-EQUIP-004" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                <a href="edit-inspection-type.html?id=AFO-EQUIP-004" class="icon-button" aria-label="Edit Inspection">
                   <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
                 <a href="#" class="icon-button" aria-label="Delete Inspection">
@@ -243,18 +247,18 @@
               </td>
             </tr>
             <tr>
-              <td>Health & Safety</td>
-              <td>Wildlife Habitat Review</td>
+              <td><span class="cell-text">Wildlife Habitat Review</span></td>
+              <td>AFO-WILD-005</td>
+              <td>Wildlife Rehabilitation</td>
               <td></td>
               <td><span class="status-active">Active</span></td>
-              <td>Field Observation</td>
-              <td>Public</td>
-              <td>Single Invoice</td>
+              <td>Thomas Reilly</td>
+              <td>03/30/2026</td>
               <td>
-                <a href="#" class="icon-button" aria-label="View Inspection">
+                <a href="view-inspection-type.html?id=AFO-WILD-005" class="icon-button" aria-label="View Inspection">
                   <img src="assets/eye-icon.png" alt="" width="30" height="30">
                 </a>
-                <a href="#" class="icon-button" aria-label="Edit Inspection">
+                <a href="edit-inspection-type.html?id=AFO-WILD-005" class="icon-button" aria-label="Edit Inspection">
                   <img src="assets/edit-icon.png" alt="" width="30" height="30">
                 </a>
                 <a href="#" class="icon-button" aria-label="Delete Inspection">
@@ -301,143 +305,6 @@
     </div>
   </div>
 
-  <!-- Initiate Inspection Modal -->
-  <div id="inspection-modal" class="modal" hidden>
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">Add Inspection Type</h2>
-        <button type="button" class="modal-close" aria-label="Close modal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p class="margin-bottom-4">Initialize inspection using the values below and click Submit.</p>
-
-        <div class="margin-bottom-4">
-          <label class="usa-label" for="inspection-category">Inspection Code <span class="field-required">Required</span></label>
-          <select class="usa-select" id="inspection-category" name="inspection-category" required>
-            <option value="">Please Select</option>
-            <option value="afo-fire-001">AFO-FIRE-001</option>
-            <option value="afo-water-002">AFO-WATER-002</option>
-            <option value="afo-lic-003">AFO-LIC-003</option>
-            <option value="afo-wild-005">AFO-WILD-005</option>
-          </select>
-        </div>
-
-        <div class="margin-bottom-4">
-          <label class="usa-label" for="inspection-name">Name <span class="field-required">Required</span></label>
-          <input class="usa-input" id="inspection-name" name="inspection-name" type="text" required>
-        </div>
-
-        <div class="margin-bottom-4">
-          <label class="usa-label" for="inspection-description">Description</label>
-          <input class="usa-input" id="inspection-description" name="inspection-description" type="text">
-        </div>
-
-        <div class="margin-bottom-4">
-          <fieldset class="usa-fieldset">
-            <legend class="usa-label">Status <span class="field-required">Required</span></legend>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="status-active" type="radio" name="status" value="active" checked>
-              <label class="usa-radio__label" for="status-active">Active</label>
-            </div>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="status-inactive" type="radio" name="status" value="inactive">
-              <label class="usa-radio__label" for="status-inactive">Inactive</label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="margin-bottom-4">
-          <fieldset class="usa-fieldset">
-            <legend class="usa-label">Visibility <span class="field-required">Required</span></legend>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="visibility-internal" type="radio" name="visibility" value="internal" checked>
-              <label class="usa-radio__label" for="visibility-internal">Internal</label>
-            </div>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="visibility-public" type="radio" name="visibility" value="public">
-              <label class="usa-radio__label" for="visibility-public">Public</label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="margin-bottom-4">
-          <fieldset class="usa-fieldset">
-            <legend class="usa-label">Billable Type <span class="field-required">Required</span></legend>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="billable-none" type="radio" name="billable-type" value="none" checked>
-              <label class="usa-radio__label" for="billable-none">None</label>
-            </div>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="billable-single" type="radio" name="billable-type" value="single">
-              <label class="usa-radio__label" for="billable-single">Single Invoice</label>
-            </div>
-            <div class="usa-radio">
-              <input class="usa-radio__input" id="billable-batch" type="radio" name="billable-type" value="batch">
-              <label class="usa-radio__label" for="billable-batch">Batch Invoice</label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div id="scheduling-section" class="margin-bottom-4" hidden>
-          <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.6rem;">Scheduling</h3>
-
-          <div class="margin-bottom-4">
-            <label class="usa-label" for="frequency">Frequency <span class="field-required">Required</span></label>
-            <select class="usa-select" id="frequency" name="frequency">
-              <option value="">Please Select</option>
-              <option value="days">Days</option>
-              <option value="months">Months</option>
-              <option value="annual">Annual</option>
-              <option value="biennial">Biennial</option>
-              <option value="quarterly">Quarterly</option>
-            </select>
-          </div>
-
-          <div class="grid-row grid-gap-2">
-            <div class="grid-col-6">
-              <label class="usa-label" for="schedule-start-date">Start Date <span class="field-required">Required</span></label>
-              <div class="date-picker-wrapper">
-                <input class="usa-input" id="schedule-start-date" name="schedule-start-date" type="text" placeholder="MM/DD/YYYY">
-                <button type="button" class="date-picker-button" aria-label="Select date">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="grid-col-6">
-              <label class="usa-label" for="schedule-end-date">End Date</label>
-              <div class="date-picker-wrapper">
-                <input class="usa-input" id="schedule-end-date" name="schedule-end-date" type="text" placeholder="MM/DD/YYYY">
-                <button type="button" class="date-picker-button" aria-label="Select date">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="usa-button modal-submit">Submit</button>
-        <button type="button" class="usa-button usa-button--secondary modal-cancel">Cancel</button>
-      </div>
-    </div>
-  </div>
-
   <script>
     // Accordion functionality
     document.querySelectorAll('.usa-accordion__button').forEach(button => {
@@ -453,151 +320,6 @@
           content.removeAttribute('hidden');
         }
       });
-    });
-
-    // Modal functionality for editing
-    const modal = document.getElementById('inspection-modal');
-    const modalTitle = modal.querySelector('.modal-title');
-    const closeButton = modal.querySelector('.modal-close');
-    const cancelButton = modal.querySelector('.modal-cancel');
-    const submitButton = modal.querySelector('.modal-submit');
-    const modalOverlay = modal.querySelector('.modal-overlay');
-
-    let editingRow = null;
-
-    // Form fields
-    const categorySelect = document.getElementById('inspection-category');
-    const nameInput = document.getElementById('inspection-name');
-    const descriptionInput = document.getElementById('inspection-description');
-    const statusRadios = document.getElementsByName('status');
-    const visibilityRadios = document.getElementsByName('visibility');
-    const billableTypeRadios = document.getElementsByName('billable-type');
-    const schedulingSection = document.getElementById('scheduling-section');
-
-    // Show/hide scheduling section based on category
-    categorySelect.addEventListener('change', function() {
-      if (this.value === 'routine') {
-        schedulingSection.removeAttribute('hidden');
-      } else {
-        schedulingSection.setAttribute('hidden', '');
-      }
-    });
-
-    // Clear form function
-    function clearModalForm() {
-      categorySelect.value = '';
-      nameInput.value = '';
-      descriptionInput.value = '';
-      document.getElementById('status-active').checked = true;
-      document.getElementById('visibility-internal').checked = true;
-      document.getElementById('billable-none').checked = true;
-
-      // Clear and hide scheduling section
-      document.getElementById('frequency').value = '';
-      document.getElementById('schedule-start-date').value = '';
-      document.getElementById('schedule-end-date').value = '';
-      schedulingSection.setAttribute('hidden', '');
-    }
-
-    // Edit button functionality
-    document.querySelectorAll('a[aria-label="Edit Inspection"]').forEach(editButton => {
-      editButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        editingRow = this.closest('tr');
-        const cells = editingRow.querySelectorAll('td');
-
-        // Populate form with row data
-        const category = cells[0].textContent.trim();
-        const name = cells[1].textContent.trim();
-        const description = cells[2].textContent.trim();
-        const status = cells[3].textContent.trim().toLowerCase();
-        const visibility = cells[4].textContent.trim().toLowerCase();
-        const billableType = cells[5].textContent.trim();
-
-        // Set form values
-        categorySelect.value = category.toLowerCase();
-        nameInput.value = name;
-        descriptionInput.value = description;
-
-        // Set status radio
-        if (status === 'active') {
-          document.getElementById('status-active').checked = true;
-        } else {
-          document.getElementById('status-inactive').checked = true;
-        }
-
-        // Set visibility radio
-        if (visibility === 'internal') {
-          document.getElementById('visibility-internal').checked = true;
-        } else {
-          document.getElementById('visibility-public').checked = true;
-        }
-
-        // Set billable type radio
-        if (billableType === 'None') {
-          document.getElementById('billable-none').checked = true;
-        } else if (billableType === 'Single Invoice') {
-          document.getElementById('billable-single').checked = true;
-        } else if (billableType === 'Batch Invoice') {
-          document.getElementById('billable-batch').checked = true;
-        }
-
-        // Update modal title and open
-        modalTitle.textContent = 'Edit Inspection';
-        modal.removeAttribute('hidden');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    // Close modal function
-    function closeModal() {
-      modal.setAttribute('hidden', '');
-      document.body.style.overflow = '';
-      editingRow = null;
-    }
-
-    // Close modal on X button
-    closeButton.addEventListener('click', closeModal);
-
-    // Close modal on Cancel button
-    cancelButton.addEventListener('click', closeModal);
-
-    // Close modal on overlay click
-    modalOverlay.addEventListener('click', closeModal);
-
-    // Submit button
-    submitButton.addEventListener('click', function() {
-      // Get form values
-      const category = categorySelect.options[categorySelect.selectedIndex].text;
-      const name = nameInput.value;
-      const description = descriptionInput.value;
-      const status = document.querySelector('input[name="status"]:checked').value === 'active' ? 'Active' : 'Inactive';
-      const visibility = document.querySelector('input[name="visibility"]:checked').value === 'internal' ? 'Internal' : 'Public';
-
-      // Get billable type
-      const billableTypeValue = document.querySelector('input[name="billable-type"]:checked').value;
-      let billableType = 'None';
-      if (billableTypeValue === 'single') {
-        billableType = 'Single Invoice';
-      } else if (billableTypeValue === 'batch') {
-        billableType = 'Batch Invoice';
-      }
-
-      if (editingRow) {
-        // Update existing row
-        const cells = editingRow.querySelectorAll('td');
-        cells[0].textContent = category;
-        cells[1].textContent = name;
-        cells[2].textContent = description;
-        cells[3].textContent = status;
-        cells[4].textContent = visibility;
-        cells[5].textContent = billableType;
-      } else {
-        // Add new row logic here if needed
-        console.log('New inspection created');
-      }
-
-      closeModal();
     });
 
     // Delete confirmation functionality
